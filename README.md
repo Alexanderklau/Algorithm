@@ -12,6 +12,7 @@
 - Recursion_alg 递归算法
 - Tree_alg 树算法
 - Graph_alg 图算法
+- Everyday_alg 每日算法
 
 ## UPDATE LOG
  
@@ -24,3 +25,4 @@
 
 - 更新栈/队列算法，并且附上leetcode原题
 - 将概念综合，放置在相应文件夹内
+- 更新每日算法 update
