@@ -20,5 +20,15 @@ def Cashcount(casha, cashb):
 
 # 开始计算
 
-z = len(a)
+i = 6
 
+sumall = Cashcount(a, b)
+
+while i >= 0:
+    if sumall > a[i]:
+        n = int(sumall / a[i])
+        if n >= b[i]:
+            n = b[i]
+        sumall -= n * a[i]
+        print("用了{num}个{cash}硬币".format(num = n, cash = a[i]))
+    i -= 1
