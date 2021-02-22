@@ -13,6 +13,7 @@
 - Tree_alg 树算法
 - Graph_alg 图算法
 - Greedy_alg 贪心算法
+- BFS/DFS_alg 广/深度算法
 - Everyday_alg 每日算法
 
 ## UPDATE LOG
