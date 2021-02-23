@@ -27,6 +27,8 @@ __author__ = 'Yemilice_lau'
 
 """
 
+import collections
+
 class Solution(object):
     def isSymmetric(self, root):
         """
