@@ -18,78 +18,9 @@ D       E
 
 如果用BFS算法，会从左到右遍历节点
 
-遍历的过程是  A B D C E F
+遍历的过程是  A B C D E F
 
+BFS算法也叫层序遍历
 
-举个简单的例子
+所以BFS算法需要用队列来实现先进先出的逻辑
 
-我们模拟一个走格子的游戏，现在要从1出发，移动到9
-
-```
-1 2 3
-4 5 6
-7 8 9
-```
-
-用BFS算法分析
-
-第一步，从1出发，记录所有岔路口
-
-```
-0 1 0 
-1 0 0
-0 0 0
-```
-
-第二步，回到最上面的1处，继续记录能走的岔路口
-
-```
-0 1 2
-1 2 0
-2 0 0
-```
-
-第三步，以此类推
-
-```
-0 1 2
-1 2 3
-2 3 0
-```
-
-第四步
-
-```
-0 1 2
-1 2 3
-2 3 4
-```
-这就得出了移动到9的所有路径。
-
-可以看出，广度优先算法主要是由近到远的方式来搜索，会先访问最近的点，然后一层层去寻找问题的答案。
-
-用代码表示这个逻辑
-
-```python
-from collections import deque
-def bsf_graph(root):
-    if not root:
-        return
-    # queue和seen为一对好基友，同时出现
-    queue = deque([root])
-    # seen避免图遍历过程中重复访问的情况，导致无法跳出循环
-    seen = set([root])
-    while queue:
-        head = queue.popleft()
-        # do somethings with the head node
-        # 将head的邻居都添加进来
-        for neighbor in head.neighbors:
-            if neighbor not in seen:
-                queue.append(neighbor)
-                seen.add(neighbor)
-    return xxx
-```
-
-此处是BFS的基础模版，其实网上的大多数都说的不是很清楚
-
-## BFS算法模板
