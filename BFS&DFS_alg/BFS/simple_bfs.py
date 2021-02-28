@@ -21,16 +21,18 @@ def BFS(root):
     result = []
 
     while queue:
-        node = queue.popleft()
-        result.append(node.val)
-        print(node.val)
-        left = node.left
-        if left != None:
-            queue.append(left)
-        right = node.right
-        if right != None:
-            queue.append(right)
-
+        tmp = deque()
+        for i in range(len(queue)):
+            node = queue.popleft()
+            tmp.append(node.val)
+            print(node.val)
+            left = node.left
+            if left != None:
+                queue.append(left)
+            right = node.right
+            if right != None:
+                queue.append(right)
+        result.append(list(tmp))
     return result
 
 
