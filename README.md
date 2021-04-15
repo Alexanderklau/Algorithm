@@ -82,3 +82,9 @@
 ### 2021-02-23
 
 - 更新图算法
+
+### 2021-04-15
+
+- 更新二叉树遍历算法逻辑（Tree_alg/Binary_tree）
+- 更新二叉树的前序，后序，中序遍历模版 （Tree_alg/Binary_tree）
+- 更新leetcode上二叉树前序，后序，中序遍历的一些算法题 （Tree_alg/Binary_tree）
