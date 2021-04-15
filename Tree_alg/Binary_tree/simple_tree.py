@@ -94,17 +94,31 @@ def BFS(root):
     return i
 
 
-def dfs(node, visited):
-    if node in visited:
-        return
-    visited.add(node)
+def DFS(root):
+    if root:
+        res = []
+        stack = [root]
+        # 当 stack 有值
+        while stack:
+            currentNode = stack.pop()
+            res.append(currentNode.key)
+            if currentNode.right:
+                stack.append(currentNode.right)
+            if currentNode.left:
+                stack.append(currentNode.left)
+    return res
 
-    for next_node in node.children():
-        if not next_node in visited:
-            dfs(next_node, visited)
+def DFS2(root):
+    if root is not None:
+        print(root.key)
+        if root.left is not None:
+            return DFS(root.left)
+        if root.right is not None:
+            return DFS(root.right)
+
 
 if __name__ == "__main__":
     visited = set()
     root = BinaryTree('A', BinaryTree('B', BinaryTree('D'), BinaryTree('E')),
                       BinaryTree('C', right=BinaryTree('F', left=BinaryTree("G"))))
-    print(BFS(root))
+    print(DFS2(root))
