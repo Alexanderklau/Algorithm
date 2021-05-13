@@ -15,6 +15,7 @@
 - Greedy_alg 贪心算法
 - BFS/DFS_alg 广/深度算法
 - Everyday_alg 每日算法
+- HOT100 leetcode-100热题
 
 ## UPDATE LOG
  
@@ -87,4 +88,8 @@
 
 - 更新二叉树遍历算法逻辑（Tree_alg/Binary_tree）
 - 更新二叉树的前序，后序，中序遍历模版 （Tree_alg/Binary_tree）
-- 更新leetcode上二叉树前序，后序，中序遍历的一些算法题 （Tree_alg/Binary_tree）
+- 更新leetcode上二叉树前序，后序，中序遍历的一些算法题 （Tree_alg/Binary_tree
+
+### 2021-05-13
+
+- 更新 HOT100 项目，将HOT100的所有题目更新到此文件夹当中
