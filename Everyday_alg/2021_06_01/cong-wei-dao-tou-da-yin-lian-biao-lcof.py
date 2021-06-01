@@ -41,3 +41,21 @@ class Solution(object):
             z.append(head.val)
             head = head.next
         return z
+
+"""
+class Solution(object):
+    def reversePrint(self, head):
+        ans = []
+        next_ = None
+        pre = None
+        while head is not None:
+            next_ = head.next
+            head.next = pre
+            pre = head
+            head = next_
+        
+        while pre is not None:
+            ans.append(pre.val)
+            pre = pre.next
+        return ans
+"""
