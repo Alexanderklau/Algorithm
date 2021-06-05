@@ -11,6 +11,7 @@
 - Sort_Alg 排序算法
 - Recursion_alg 递归算法
 - Tree_alg 树算法
+- LinkedList_alg 链表算法
 - Graph_alg 图算法
 - Greedy_alg 贪心算法
 - BFS/DFS_alg 广/深度算法
