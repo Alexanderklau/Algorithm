@@ -32,28 +32,31 @@ __author__ = "lau.wenbo"
 #         self.right = right
 class Solution(object):
     def __init__(self):
-        self.work = []
-
-    def isValidBST(self, root):
+        self.nums = []
+    def recoverTree(self, root):
         """
-        :type root: TreeNode
-        :rtype: bool
         """
-        self.dfs(root)
+        x = None
+        y = None
+        pre = self.nums[0]
 
-        return self.isAscending(self.work)
+        for i in range(1, len(self.nums)):
+            if pre.val > self.nums[i].val:
+                y = self.nums[i]
+                if not x:
+                    x = pre
+            pre = self.nums[i]
+
+        if x and y:
+            x.val, y.val = y.val, x.val
+
+
+
 
     def dfs(self, root):
         if root == None:
             return
-        self.dfs(root.left)
-        self.work.append(root.val)
-        self.dfs(root.right)
 
-    def isAscending(self, xs):
-        for n in range(len(xs) - 1):
-            if xs[n] > xs[n + 1]:
-                return False
-            elif xs[n] == xs[n + 1]:
-                return False
-        return True
+        self.dfs(root.left)
+        self.nums.append(root)
+        self.dfs(root.right)
