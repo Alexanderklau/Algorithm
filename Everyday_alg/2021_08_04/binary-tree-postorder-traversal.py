@@ -2,24 +2,21 @@
 
 __author__ = "lau.wenbo"
 
+
 """
-给定一个二叉树的根节点 root ，返回它的 中序 遍历。
+给定一个二叉树，返回它的 后序 遍历。
 
- 
+示例:
 
-示例 1：
+输入: [1,null,2,3]  
+   1
+    \
+     2
+    /
+   3 
 
-
-输入：root = [1,null,2,3]
-输出：[1,3,2]
-示例 2：
-
-输入：root = []
-输出：[]
-示例 3：
-
-输入：root = [1]
-输出：[1]
+输出: [3,2,1]
+进阶: 递归算法很简单，你可以通过迭代算法完成吗？
 """
 
 
@@ -27,7 +24,7 @@ class Solution(object):
     def __init__(self):
         self.nums = []
 
-    def preorderTraversal(self, root):
+    def postorderTraversal(self, root):
         """
         :type root: TreeNode
         :rtype: List[int]
@@ -39,6 +36,6 @@ class Solution(object):
         if root == None:
             return
 
-        self.nums.append(root.val)
         self.work(root.left)
         self.work(root.right)
+        self.nums.append(root.val)
