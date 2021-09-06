@@ -20,6 +20,7 @@ __author__ = 'Yemilice_lau'
 
 """
 
+
 class Solution(object):
     def search(self, nums, target):
         """
@@ -29,16 +30,15 @@ class Solution(object):
         """
 
         start = 0
-        end = len(nums)
-        z = 0
+        end = len(nums) - 1
 
-        while z < end:
-            mid = (start + end) // 2
-            if nums[z] == target:
-                return z
-            if nums[z] < target:
-                start = z
-            if nums[z] > target:
-                end = z
-            z += 1
+        while start <= end:
+            mid = start + (end - start) // 2
+            if nums[mid] == target:
+                return mid
+            if nums[mid] < target:
+                start += 1
+            if nums[mid] > target:
+                end -= 1
+
         return -1
