@@ -99,3 +99,8 @@
 
 - 开始更新算法思想Algorithm_idea 快慢指针，双指针问题
 - 开始复习树的相关知识
+
+### 2021-09-08
+
+- 更新动态规划思想 Algorithm_idea/Dynamic_programming
+- 更新几道动态规划的简单题目
