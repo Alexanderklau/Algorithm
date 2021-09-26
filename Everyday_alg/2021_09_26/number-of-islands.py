@@ -46,7 +46,6 @@ class Solution(object):
         col = len(grid[0])
         arrived = [[False for j in range(col)] for i in range(row)]
         z = []
-        ans = 0
 
         def dfs(x, y):
             if x >= 0 and x < row and y >= 0 and y < col and not arrived[x][y] and grid[x][y] == "1":
