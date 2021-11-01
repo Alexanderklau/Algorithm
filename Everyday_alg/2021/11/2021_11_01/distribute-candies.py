@@ -2,7 +2,6 @@
 
 __author__ = 'Yemilice'
 
-
 """
 Alice 有 n 枚糖，其中第 i 枚糖的类型为 candyType[i] 。Alice 注意到她的体重正在增长，所以前去拜访了一位医生。
 
@@ -28,6 +27,7 @@ Alice 有 n 枚糖，其中第 i 枚糖的类型为 candyType[i] 。Alice 注意
 输出：1
 解释：Alice 只能吃 4 / 2 = 2 枚糖，尽管她能吃 2 枚，但只能吃到 1 种糖。
 """
+
 
 class Solution(object):
     def distributeCandies(self, candyType):
