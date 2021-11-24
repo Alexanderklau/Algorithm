@@ -2,7 +2,6 @@
 
 __author__ = 'Yemilice'
 
-
 """
 给定一个字符串数组 words，找到 length(word[i]) * length(word[j]) 的最大值，
 
@@ -28,8 +27,9 @@ __author__ = 'Yemilice'
 
 """
 
+
 class Solution:
-    def maxProduct(self, words: List[str]) -> int:
+    def maxProduct(self, words: [str]) -> int:
         sets = [set(word) for word in words]
 
         res = 0
