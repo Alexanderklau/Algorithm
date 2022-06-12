@@ -2,7 +2,11 @@
 
 此为学习算法之笔记&算法代码实现过程
 
-使用Python代码完全实现
+2022-6-12 update
+
+更新Golang部分代码
+
+使用Python/Golang代码完全实现
 
 ## Algorithm File 
 - Data_Structure 数据结构的相关实现方法
