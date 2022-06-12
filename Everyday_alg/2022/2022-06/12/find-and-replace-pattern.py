@@ -33,10 +33,11 @@ __author__ = 'Yemilice'
 """
 
 class Solution:
-    def findAndReplacePattern(self, words: List[str], pattern: str) -> List[str]:
+    def findAndReplacePattern(self, words: list[str], pattern: str) -> list[str]:
         return [w for w in words if self.filter_words(w, pattern)]
 
     def filter_words(self, w, p):
         if len(w) != len(p):
             return False
         return len(set(w)) == len(set(p)) == len(set(zip(w, p)))
+
