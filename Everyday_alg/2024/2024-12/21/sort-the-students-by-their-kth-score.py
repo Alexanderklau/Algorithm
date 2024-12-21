@@ -6,6 +6,7 @@
  # @ File: sort-the-students-by-their-kth-score.py
  # @ Description:
  """
+from typing import List
 
 """
 班里有 m 位学生，共计划组织 n 场考试。给你一个下标从 0 开始、大小为 m x n 的整数矩阵 score ，
